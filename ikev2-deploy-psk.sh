@@ -1,5 +1,5 @@
 function bail_out {
-	echo -e "\033[31;7mThis script supports only Ubuntu 16.04. Terminating.\e[0m"
+	echo -e "\033[31;7mThis script supports only Ubuntu 22.04. Terminating.\e[0m"
 	exit 1
 }
 
@@ -7,7 +7,7 @@ if ! [ -x "$(command -v lsb_release)" ]; then
 	bail_out
 fi
 
-if [ $(lsb_release -i -s) != "Ubuntu" ] || [ $(lsb_release -r -s) != "20.04" ]; then 
+if [ $(lsb_release -i -s) != "Ubuntu" ] || [ $(lsb_release -r -s) != "22.04" ]; then 
 	bail_out
 fi
 
@@ -53,7 +53,7 @@ conn ikev2-vpn
     leftsubnet=0.0.0.0/0
     right=%any
     rightid=%any
-    rightdns=8.8.8.8,8.8.4.4
+    rightdns=8.8.8.8,1.1.1.1
     rightsourceip=10.10.10.0/24
     authby=secret
 EOF
