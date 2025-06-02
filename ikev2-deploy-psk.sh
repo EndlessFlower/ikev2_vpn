@@ -23,7 +23,7 @@ apt-get -y dist-upgrade
 
 # skips interactive dialog for iptables-persistent installer
 export DEBIAN_FRONTEND=noninteractive
-apt-get -y install strongswan strongswan-plugin-eap-mschapv2 moreutils iptables-persistent
+apt-get -y install strongswan libcharon-extra-plugins moreutils iptables-persistent
 
 #=========== 
 # STRONG SWAN CONFIG
